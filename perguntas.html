@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtlasTech</title>
+    <link
+      rel="shortcut icon"
+      href="ico/atlas.semfundo.ico"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        background-image: url(tech/só-fundo-imagem.png);
+        background-size: cover;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 19px;
+        border: 20px;
+        margin: 0px;
+        position: relative;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      nav ul li a {
+        color: rgb(255, 255, 255);
+        font-family: serif;
+        text-decoration: none;
+        padding: 0px;
+        margin: 100px;
+        font-size: 19px;
+      }
+      nav ul li a:hover {
+        color: #3564aa;
+      }
+      main {
+        padding: 20px;
+        text-align: none;
+      }
+
+      form {
+        display: inline-block;
+        text-align: center;
+      }
+      form label {
+        display: block;
+        margin-top: 10px;
+      }
+      form input {
+        width: 100%;
+        max-width: 200px;
+        display: flex;
+        justify-content: center;
+      }
+      /* layouts das seções */
+      .fullscreen {
+        position: fixed;
+        width: 100vw;
+        height: 50vw;
+        object-fit: cover;
+        z-index: -1;
+      }
+      section {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+      }
+
+      div.conteiner {
+        align-items: flex-start;
+        display: flex;
+        justify-content: right;
+        gap: 60px;
+        flex-wrap: wrap;
+        padding: 40px 0;
+      }
+      .caixa-esquerda {
+        width: 400px;
+        height: 400px;
+        margin: 72.5px;
+        background: linear-gradient(to right, rgb(4, 4, 4), rgb(128, 128, 128));
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* pode usar center se quiser tudo centralizado */
+        padding: 0px;
+      }
+
+      .titulo {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        margin-bottom: 20px;
+        margin-top: 0;
+      }
+      .conteudo {
+        color: rgb(255, 255, 255);
+        text-align: center;
+      }
+      p {
+        color: rgb(255, 255, 255);
+      }
+      input {
+        width: 200px;
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 30px;
+        border: none;
+        font-size: 15px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+      }
+
+      button {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        box-shadow: 0 0 10px white;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 10px;
+        width: 50%;
+        border: none;
+        border-radius: 20px;
+      }
+      footer {
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .item {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 15px;
+        color: rgb(255, 255, 255);
+        margin: 10px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        max-width: 100%;
+      }
+
+      .item strong {
+        color: #ffffff;
+        /*nome da pessoa que fez a pergunta*/
+      }
+      .caixa-direita {
+        width: 400px;
+        height: 400px;
+        margin: 72px;
+        color: black;
+        background: linear-gradient(to right, rgb(4, 4, 4), rgb(128, 128, 128));
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* pode usar center se quiser tudo centralizado */
+        padding: 0px;
+      }
+      .feedback {
+        overflow-y: auto;
+        max-height: 200px;
+        padding-right: 30px;
+        border-radius: 20px;
+        word-wrap: break-word;
+        overflow-wrap:break-word ;
+        white-space: normal;
+      }
+
+      /*conteudo mobile, em baixo*/
+      @media screen and (max-width: 1080px) {
+        body {
+          background-image: url(tech/só-fundo-imagem.png);
+          background-size: cover;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+       nav ul {
+          position: fixed;
+          padding: 5%;
+          font-size: 20%;
+          left: 2%;
+          display: flex;
+          text-align: center;
+          list-style-type: none;
+        }
+        nav ul li a {
+          color: rgb(255, 255, 255);
+          margin: 15px;
+          text-decoration: none;
+        }
+        nav ul li a:hover {
+        color: #3564aa;
+      }
+        .caixa-esquerda {
+        width: 300%;
+        height: 280%;
+        margin: 10%;
+        background: linear-gradient(to right, rgb(4, 4, 4), rgb(128, 128, 128));
+        border-radius: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* pode usar center se quiser tudo centralizado */
+      }
+      input {
+        width: 200%;
+        margin-top:5%;
+        padding: 4%;
+        border-radius: 5%;
+        border: none;
+        font-size: 120%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+      }
+      .caixa-direita {
+        width: 300%;
+        height: 300px;
+        margin: 10%;
+        color: black;
+        background: linear-gradient(to right, rgb(4, 4, 4), rgb(128, 128, 128));
+        border-radius: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* pode usar center se quiser tudo centralizado */
+      }
+      .feedback {
+        overflow-y: auto;
+        max-height: 300%;
+        padding-right: 50%;
+        border-radius: 10%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <i><a href="pagina.html"> Pagina inicial</a></i>
+          </li>
+          <li>
+            <i><a href="contato.html">Contato</a></i>
+          </li>
+          <li>
+            <i><a href="sobre.html">Empresa</a></i>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div class="conteiner">
+        <section class="caixa-esquerda">
+          <!-- Conteúdo da primeira caixa -->
+          <h1>FeedBack</h1>
+          <h2>deixe sua pergunta</h2>
+          <form id="feedbackForm">
+            <input type="text" id="nome" placeholder="Seu nome" required />
+            <input id="pergunta" placeholder="Sua pergunta" required />
+            <button type="submit">Enviar</button>
+          </form>
+          
+        </section>
+
+        <div class="caixa-direita">
+          <!-- Conteúdo da segunda caixa (igual) -->
+          <h1>FeedBack</h1>
+          <h2>Perguntas Recebidas</h2>
+          <div id="feedbackList" class="feedback"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>©2025, todos seus direitos reservados pela ATLASTECH</footer>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-analytics.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        onSnapshot,
+        query,
+        orderBy,
+      } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAeZHc4KgE1Sgmj0T7g87XR2rMgrAi0hzE",
+        authDomain: "atlastech-9295c.firebaseapp.com",
+        projectId: "atlastech-9295c",
+        storageBucket: "atlastech-9295c.firebasestorage.app",
+        messagingSenderId: "220803494295",
+        appId: "1:220803494295:web:bdc686b3689fdfa8ad54d2",
+        measurementId: "G-JB8LDWPKF9",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const db = getFirestore(app);
+
+      //codigo para lidar com formulario
+      const form = document.getElementById("feedbackForm");
+      const nomeInput = document.getElementById("nome");
+      const perguntaInput = document.getElementById("pergunta");
+      const feedbackList = document.getElementById("feedbackList");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const nome = nomeInput.value.trim();
+        const pergunta = perguntaInput.value.trim();
+
+        if (nome && pergunta) {
+          //salvar no firestore
+          await addDoc(collection(db, "perguntas"), {
+            nome: nome,
+            pergunta: pergunta,
+            timestamp: Date.now(),
+          });
+
+          // limpar o formulario
+          form.reset();
+        }
+      });
+      //Exibir ao vivo
+      const perguntasRef = collection(db, "perguntas");
+      const perguntasOrdenadas = query(
+        perguntasRef,
+        orderBy("timestamp", "desc")
+      );
+
+      onSnapshot(perguntasOrdenadas, (snapshot) => {
+        console.log("Snapshot atual", snapshot.docs); // Adicione este log para ver o que está sendo capturado
+
+        feedbackList.innerHTML = ""; // Limpa a lista antes de atualizar
+
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          const item = document.createElement("div");
+          item.className = "item";
+          item.innerHTML = `<strong>${data.nome}</strong>: ${data.pergunta}`;
+          feedbackList.appendChild(item);
+        });
+      });
+    </script>
+  </body>
+</html>

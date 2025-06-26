@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtlasTech</title>
+    <link
+      rel="shortcut icon"
+      href="ico/atlas.semfundo.ico"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        overflow: hidden;
+        background-image: url(tech/tech.ajustado.jfif);
+      }
+
+      header {
+        padding: 10px;
+      }
+
+      nav ul {
+        position: relative;
+        padding: 20px;
+        list-style-type: none;
+        display: flex;
+        justify-content: right;
+        font-size: 20px;
+      }
+
+      nav ul li a {
+        color: rgb(255, 255, 255);
+        margin: 80px;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        color: #3564aa;
+      }
+
+      footer {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 5px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 101vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .caixa-direta {
+        background-color: transparent;
+        width: 550px;
+        height: 400px;
+        margin: 159px;
+        padding: 10px;
+        margin-bottom: 10px;
+        top: 50px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+      }
+
+      .feedback {
+        overflow-y: auto;
+        max-height: 280px;
+        padding-right: 20px;
+        border-radius: 20px;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        width: 110%;
+      }
+
+      .feedback::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      h1 {
+        position: relative;
+        top: -88px;
+        display: flex;
+        color: white;
+        height: 100px;
+      }
+
+      h2 {
+        color: white;
+        height: 200x;
+        position: relative;
+        margin-bottom: 159px;
+      }
+      h3 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1px;
+      }
+      /*conteudo mobile, em baixo*/
+      @media screen and (max-width: 1080px) {
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+          background-image: url(tech/tela-cheia.jfif);
+          background-size: cover;
+          overflow-x: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+        nav ul {
+          position: fixed;
+          padding: 5%;
+          display: flex;
+          text-align: center;
+          left: 2%;
+          font-size: 120%;
+          list-style-type: none;
+        }
+        nav ul li a {
+          color: rgb(255, 255, 255);
+          margin: 15px;
+          text-decoration: none;
+        }
+        nav ul li a:hover {
+        color: #3564aa;
+      }
+        .caixa-direta {
+          background-color: transparent;
+          width: 70%;
+          height: 30%;
+          margin: 25%;
+          top: 5%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+        h1 {
+          color: white;
+          position: fixed;
+          align-items: center;
+          top: 5%;
+          font-size: 150%;
+        }
+        h2 {
+          color: white;
+          top: 5%;
+          height: 100%;
+          display: flex;
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <i><a href="pagina.html"> Pagina inicial</a></i>
+          </li>
+          <li>
+            <i><a href="contato.html">Contato</a></i>
+          </li>
+          <li>
+            <i><a href="perguntas.html">FeedBack</a></i>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="caixa-direta">
+      <h1>Tecnologia que Sustenta o Futuro</h1>
+      <div class="feedback">
+        <h3>
+          <strong><i>• VISÃO • </i></strong>
+        </h3>
+        <h2>
+          Tornar-se uma referência nacional em tecnologia e hardware, sendo
+          reconhecida por unir qualidade inovação e um suporte próximo ao
+          cliente. Almejamos crescer junto com nossos parceiros e clientes,
+          mantendo nossa essência: uma empresa que começou pequena, mas com
+          ideias grandes e determinação para transformar.
+        </h2>
+        <h3>
+          <strong><i>• VALORES • </i></strong>
+        </h3>
+        <h2>
+          Inovação com Propósito Criamos soluções que fazem a diferença de
+          verdade, não é tecnologia por vaidade, é por necessidade e impacto.
+        </h2>
+        <h3>
+          <strong><i>• QUALIDADE DESDE O PRIMEIRO PRODUTO •</i></strong>
+        </h3>
+        <h2>
+          Mesmo em fase inicial, buscamos excelência desde o primeiro projeto,
+          com foco no que realmente importa para o cliente.
+        </h2>
+        <h3>
+          <strong><i>• ACESSO E TRANSPARÊNCIA •</i></strong>
+        </h3>
+        <h2>
+          Tecnologia de ponta deve ser para todos. Atuamos com clareza nos
+          preços, processos e entregas, valorizando a confiança.
+        </h2>
+        <h3>
+          <strong><i>• FOCO NO CLIENTE •</i></strong>
+        </h3>
+        <h2>
+          Nosso crescimento é construído ouvindo, aprendendo e evoluindo lado a
+          lado com quem acredita na gente.
+        </h2>
+        <h3>
+          <strong><i>• RESPONSABILIDADE E ÉTICA •</i></strong>
+        </h3>
+        <h2>
+          Nossos compromissos são pautados por respeito, honestidade e
+          responsabilidade social e ambiental.
+        </h2>
+        <h3>
+          <strong><i>• ESPÍRITO DE EQUIPE •</i></strong>
+        </h3>
+        <h2>
+          Somos uma equipe movida pela paixão de criar, consertar e inovar.
+          Trabalhamos juntos, com união e propósito.
+        </h2>
+      </div>
+    </div>
+    <footer>
+      <p>&copy;2025, todos seus direitos reservados pela ATLASTECH</p>
+    </footer>
+  </body>
+</html>

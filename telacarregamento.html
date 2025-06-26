@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtlasTech</title>
+</head>
+<style>
+ /* Tela de Carregamento */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+             background: linear-gradient(to right, 
+             #000000 0%,     /* esquerda escura */
+             #1a1aff 30%,    /* transição pro centro */
+             #00aaff 50%,    /* centro claro */
+             #1a1aff 70%,    /* transição de volta */
+             #000000 100%    /* direita escura */ );
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .loader {
+            position: relative;
+            width: 150px;
+            height: 250px;
+            animation: rotacionar 5s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes rotacionar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(calc(30deg * var(--i)));
+        }
+
+        .loader span::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, .15);
+        }
+
+        .loader span:nth-of-type(3n +3)::before {
+            background: #00a0fd;
+            box-shadow: 0 0 10px rgb(255, 255, 255),
+                        0 0 10px rgb(255, 255, 255),
+                        0 0 10px rgb(255, 255, 255),
+                        0 0 10px rgb(255, 255, 255),
+                        0 0 100px rgb(255, 255, 255),
+                        0 0 100px rgb(255, 255, 255);
+            animation: animarQuadrado 1.6s linear infinite;
+            transform-origin: 125px;
+        }
+
+        @keyframes animarQuadrado {
+            0%, 25% { transform: rotate(10deg); }
+            75%, 100% { transform: rotate(180deg); }
+        }
+
+        #loading h3 {    
+            position: absolute;
+            font-size: 1.2em;
+            font-weight: 500;
+            color: rgb(0, 0, 0);
+            text-transform: uppercase;
+            text-shadow: 0 0 0px rgb(228, 224, 224),
+                         0 0 8px rgb(255, 255, 255),
+                         0 0 40px white,
+                         0 0 88px rgb(255, 255, 255),
+                         0 0 55px white;
+        }
+</style>
+<body>
+       <div class="caixa">
+        <div class="loader">
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:6"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+        </div>
+        <h3><b>carregando...</b></h3>
+    </div>
+    
+</body>
+</html>
